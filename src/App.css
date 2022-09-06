@@ -1,38 +1,199 @@
-.App {
-  text-align: center;
-}
+/* .card * {
+  border: 1px solid blue;
+} */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cardlist {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 442px;
+  margin: 1rem;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* card head */
+
+.card .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 20px;
+  border-bottom: 1.5px solid #d8d8d8;
+}
+
+.card .head img {
+  width: 24px;
+}
+.card .head .sub-head {
+  display: flex;
+  align-items: center;
+  line-height: 16px; 
+}
+
+.card .head .sub-head img {
+  width: 80px;
+  height: max-content;
+  margin-right: 21px;
+}
+
+.card .head .sub-head .text h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ff5a5a;
+  margin: 0 0 8px;
+}
+.card .head .sub-head .text h2 {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #9b9b9b;
+  margin: 0 0 24px;
+}
+
+.card .head .sub-head .text h3 {
+  font-size: 20px;
+  font-weight: 300;
+  color: #9b9b9b;
+  margin: 0;
+}
+
+/* card body */
+
+/* .card .body {
+  border-bottom: 1.5px solid #d8d8d8;
+} */
+
+.card .body .rounds {
+  display: flex;
+  padding: 16px 0;
+}
+
+.card .body .rounds h2 {
+  font-size: 20px;
+  font-weight: 300;
+  color: #5f5f5f;
+}
+
+.card .body .rounds .round-container {
+  display: flex;
+  align-items: center;
+  margin-left: 23px;
+}
+
+.card .body .rounds .round-container .round {
+  width: 29px;
+  height: 29px;
+  border-radius: 100%;
+  margin-right: 8px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.card .body .rounds .round-container div {
+  background-color: #d8d8d8;
+}
+.card .body .rounds .round-container div.active {
+  background-color: #2ecc71;
+}
+
+.card .body .rounds .round-container .round p {
   color: white;
+  font-size: 18.4px;
+  font-weight: 500;
 }
 
-.App-link {
-  color: #61dafb;
+.card .body .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 21px; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card .body .title h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ff5a5a;
+}
+
+/* score edit button */
+.score-edit-button {
+  padding: 7px 8px 8px 15px;
+  border-radius:50px;
+  border: solid 1px #ff5a5a;
+  display: flex;
+  align-items: center;
+}
+
+.score-edit-button p {
+  font-size: 12px;
+  font-weight: 500;
+  color: #ff5a5a;
+
+}
+.score-edit-button img {
+  margin-left: 8px;
+}
+
+/* card scores */
+
+.card .body .user-score {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.card .body .user-score img {
+  width: 27px;
+  padding-left: 30px;
+}
+
+.card .body .user-score div {
+  text-align: right;
+}
+
+.card .body .user-score div p {
+  font-size: 12px;
+  font-weight: 300;
+  margin: 0;
+  color: #4a4a4a;
+}
+
+.card .body .user-score div h2 {
+  font-size: 42px;
+  font-weight: 300;
+  margin: 0;
+  color: #4a4a4a;
+}
+
+/* card stats */
+
+.card .body .score-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: #5f5f5f;
+}
+
+.card .body .score-stats h4 {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.card .body .score-stats p {
+  font-size: 11.2px;
+  font-weight: 400;
+  margin: 4px;
+}
+
+.card .body .score-stats .line {
+  width: 1px;
+  height: 30px;
+  background-color: #d8d8d8;
 }
